@@ -1,0 +1,25 @@
+table{
+	
+	text-align: left;
+	padding: 20px;
+	
+	border-style: dashed;
+	border-color: #ff8000;
+}
+body{
+	text-align: left;
+	
+	margin:40px;
+	color: #b3804d;
+	font-style: cursive;
+	font-size: 20px;
+	padding: 40px;
+}
+h4{
+	color: #ff9933;
+}
+h1{
+	color: #ff9933;
+
+}
+}

@@ -1,0 +1,37 @@
+body{
+	font-style: cursive;
+	background-color: 
+}
+h1,h2,h3,h4{
+	color: blue;
+}
+img{
+	border-radius: 8px;
+}
+table,tr,td{
+	padding: 30px;
+}
+h1{
+	font-family: Jokerman;
+	font-size: 60px;
+	text-align: center;
+	font-weight: bold;
+}
+h2,h3,h4{
+	font-family: Lucida Calligraphy;
+}
+h2{
+	font-size: 40px;
+	text-align: center;
+
+}
+h3{
+	font-size: 30px;
+}
+p{
+	font-family: Adobe Hebrew;
+	font-size: 18px;
+}
+h4{
+	font-size: 20px;
+}

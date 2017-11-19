@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<document>
+ <users>
+ <user>
+ <userid>abc</userid><br>
+ <password>abc</password><br>
+ <first_name>raj</first_name><br>
+ <last_name>kumar</last_name><br>
+ <dob>10/1/1982</dob><br>
+ </user><br>
+ <user><br>
+ <userid>ravi</userid><br>
+ <password>ravi</password><br>
+ <first_name>ravi</first_name><br>
+ <last_name>kumar</last_name><br>
+ <dob>11/11/1982</dob><br>
+ </user><br>
+<user><br>
+ <userid>sri</userid><br>
+ <password>sri</password>
+ <first_name>sri</first_name>
+ <last_name>ram</last_name>
+ <dob>12/12/1983</dob>
+ </user>
+<user>
+ <userid>lax</userid>
+ <password>lax</password>
+ <first_name>laxman</first_name>
+ <last_name>kumar</last_name>
+ <dob>1/1/1980</dob>
+ </user>
+<user>
+ <userid>chandu</userid>
+ <password>chandu</password>
+ <first_name>chandana</first_name>
+ <last_name>priya</last_name>
+ <dob>9/11/1998</dob>
+ </user>
+<user>
+ <userid>vysu</userid>
+ <password>vysu</password>
+ <first_name>vyshnavi</first_name>
+ <last_name>matha</last_name>
+ <dob>17/6/1982</dob>
+ </user>
+<user>
+ <userid>prem</userid>
+ <password>prem</password>
+ <first_name>prem</first_name>
+ <last_name>kumar</last_name>
+ <dob>11/11/1988</dob>
+ </user>
+<user>
+ <userid>geeta</userid>
+ <password>geeta</password>
+ <first_name>geeta</first_name>
+ <last_name>anjali</last_name>
+ <dob>13/1/1972</dob>
+ </user>
+<user>
+ <userid>preeti</userid>
+ <password>preeti</password>
+ <first_name>prethi</first_name>
+ <last_name>priya</last_name>
+ <dob>7/11/1968</dob>
+ </user>
+<user>
+ <userid>praveen</userid>
+ <password>praveen</password>
+ <first_name>kumar</first_name>
+ <last_name>kumar</last_name>
+ <dob>11/11/1999</dob>
+ </user>
+</users>
+</document>
+<html>
+<head>
+<title>authorization page</title>
+<script language="JavaScript" Run At=server>
+var xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+xmlDoc.load("info.xml");
+function search()
+{
+var id=document.myform.id.value;
+var pword=document.myform.pword.value;
+var qry=xmlDoc.selectNodes("document/users/user[userid='"+id+"']");
+if(qry.length!=0)
+{
+if(pword!=qry.item(0).childNodes.item(1).text)
+//document.body.innerHTML="Password incorrect";
+document.write("success");
+}
+else
+document.body.innerHTML="No matching data found. userid incorrect";
+}
+</script>
+</head>
+<body>
+<pre>
+<center>
+<form name="myform" method=post action="result.html">
+User id:<input type=text name=id><br>
+password :<input type=password name=pword><br>
+<input type=submit value=Go onClick="search()">
+</form>
+</center>
+</pre>
+</body>
+</html> 

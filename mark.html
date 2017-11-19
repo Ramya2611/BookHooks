@@ -1,0 +1,86 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  	<title>Mark Twain</title>
+  </head>
+  <body>
+  <link rel="stylesheet" type="text/css" href="css/mark.css">
+  <header>
+  <h1>Mark Twain</h1>
+    
+  </header>
+  <br/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="mark.html">Home</a>
+    <a href="markabout.html">About</a>
+    <a href="markread.html">Readings</a>
+    <a href="markwrite.html">Writings</a>
+  </div>
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801; </span>
+
+  <script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "40%";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+       
+
+
+
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <img src="img/mark twain/lead_large.jpg" style="width:100%" height="80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img/mark twain/96659-004-E11278DB.jpg" style="width:100%" height="80%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img/mark twain/1395308888143.cached.jpg" style="width:100%" height="80%">
+  </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+  <script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex> slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); 
+  }
+  </script>
+
+  </body>
+  </html>

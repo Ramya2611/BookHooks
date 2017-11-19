@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Michael Jackson</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="css/michael.css">
+<header>
+<h1>Michael Jackson</h1>
+  
+</header>
+<br/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="michael.html">Home</a>
+  <a href="michaelabout.html">About</a>
+  <a href="michaelread.html">Readings</a>
+  <a href="michaelwrite.html">Writings</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#8801; </span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "40%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+     
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="img/michael/Michael-Jackson-background-hot-pic.jpg" style="width:100%" height="80%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/michael/michael_jackson_panther_brunette_costume_cat_4131_1920x1080.jpg" style="width:100%" height="80%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img/michael/Gp8uIGd.jpg" style="width:100%" height="80%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); 
+}
+</script>
+
+
+
+
+</div>
+</body>
+</html>
